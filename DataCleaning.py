@@ -51,8 +51,8 @@ if missing_values_critical.count() > 0:
 else:
     print("\n No missing values in sales, revenue, or stock.")
 
-# Step 5: Filling Null Values in sales, revenue, and stock
-raw_data = raw_data.fillna(0, ["sales", "revenue", "stock"])
+# Step 5: Filling Null Values in sales, revenue, and stock with False for easy filtering.
+raw_data = raw_data.fillna(False, ["sales", "revenue", "stock"])
 print("\n Filled null values in sales, revenue, and stock.")
 
 # Step 6: Persist Data (to improve performance if used multiple times)
