@@ -19,8 +19,8 @@ class Spark:
         print("\n✅ Loaded raw data:")
 
     def data_cleaning(self):
-        DataClean = dataCleaning(self.spark)
-        missing_values = DataClean.check_missing_values(self.data)
+        dataClean = dataCleaning(self.spark)
+        missing_values = dataClean.check_missing_values(self.data)
         if missing_values.count() > 0:
             print("\n⚠️ Found missing values in product_id or store_id:")
             missing_values.show()
